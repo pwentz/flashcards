@@ -17,6 +17,7 @@ class Round
     if new_guess.response == @current_card.answer
       @number_correct += 1
     end
+    new_guess.feedback
     @deck.cards.shift
     @current_card = @deck.cards.first
   end
