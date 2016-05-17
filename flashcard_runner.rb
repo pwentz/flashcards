@@ -14,6 +14,7 @@ card_8 = Card.new("What is most likely to occur when your diaphragm goes into sp
 card_9 = Card.new("Who did Abraham Lincoln replace as president?", "James Buchanan")
 card_10 = Card.new("Gangster Al Capone was eventually arrested and convicted on what charge?", "Tax evasion")
 
+#TO DO: Incorporate Card Generator here:
 new_deck = Deck.new([card_2, card_3, card_6, card_8, card_10])
 
 new_round = Round.new(new_deck)
