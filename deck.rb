@@ -4,9 +4,9 @@ class Deck
     @cards = cards
   end
 
-  def cards
-    @cards
-  end
+  # def cards
+  #   @cards
+  # end
 
   def count
     cards.count
