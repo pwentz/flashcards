@@ -2,6 +2,7 @@ require_relative 'flashcards'
 require_relative 'guess'
 require_relative 'deck'
 require_relative 'round'
+require_relative 'card_generator'
 require 'pry'
 card_1 = Card.new("Who hosted Hollywood Squares between 1986 and 1989?", "John Davidson")
 card_2 = Card.new("A group of lions is called a what?", "Pride")
@@ -15,8 +16,9 @@ card_9 = Card.new("Who did Abraham Lincoln replace as president?", "James Buchan
 card_10 = Card.new("Gangster Al Capone was eventually arrested and convicted on what charge?", "Tax evasion")
 
 #TO DO: Incorporate Card Generator here:
-new_deck = Deck.new([card_2, card_3, card_6, card_8, card_10])
-
+# new_deck = Deck.new([card_2, card_3, card_6, card_8, card_10])
+new_deck = Deck.new(CardGenerator.new("trivia_questions.txt").cards)
+# binding.pry
 new_round = Round.new(new_deck)
 
 
