@@ -52,11 +52,18 @@ class Round
     end
 
     filename = Time.now.strftime("results-%Y-%m-%d-%l:%M%P")+".txt"
-    File.open(filename, "w") do |f2|
-      f2.puts pooled_questions.zip(pooled_responses, pooled_feedback, pooled_answers)
+    File.open(filename, "w") do |file_writer|
+      file_writer.puts pooled_questions.zip(pooled_responses, pooled_feedback, pooled_answers)
+      file_writer.puts "********** USE THESE RESULTS TO TRACK YOUR IMPROVEMENT! ************" + "\n"*2
+      file_writer.puts "You had #{number_correct} correct guesses out of #{guesses.count} for a score of #{percent_correct}%!" + "\n"*2
+      if percent_correct < 100
+        file_writer.puts "Not bad, but you still have room for improvement!"
+      else
+        file_writer.puts "PERFECT SCORE! Time to crank up the intensity, ya think?"
+      end
     end
-    # filename.close
-    # binding.pry
+
+
   end
 
 end
