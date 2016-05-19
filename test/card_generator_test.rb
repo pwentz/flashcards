@@ -3,9 +3,7 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require_relative '../lib/card_generator'
 require_relative '../lib/card'
-# require_relative '../trivia_questions.txt'
 require_relative '../lib/deck'
-require 'pry'
 
 class CardGeneratorTest < Minitest::Test
   def test_card_generator_exists
