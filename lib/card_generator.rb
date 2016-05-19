@@ -1,8 +1,6 @@
 require_relative 'card'
 require_relative 'guess'
-# require_relative '../trivia_questions.txt'
 require_relative 'deck'
-require 'pry'
 
 
 class CardGenerator

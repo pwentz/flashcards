@@ -3,7 +3,6 @@ require_relative './guess'
 require_relative './deck'
 require_relative './round'
 require_relative './card_generator/'
-require 'pry'
 
 new_deck = Deck.new(CardGenerator.new("trivia_questions.txt").cards)
 new_round = Round.new(new_deck)

@@ -1,5 +1,3 @@
-require 'pry'
-
 class Round
   attr_accessor  :deck,
                  :guesses,
